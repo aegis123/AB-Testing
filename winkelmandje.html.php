@@ -3,30 +3,8 @@
 <head>
     <title>Winkelmandje</title>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="js/jquery.cookie.js" charset="utf-8" type="text/javascript"></script>
+    <?php include 'header.php' ?>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
-    <script src="js/bootstrap.js" charset="utf-8" type="text/javascript"></script>
-    <!-- End Bootstrap -->
-
-    <link rel="stylesheet" href="css/mystyle.css"/>
-    <script src="js/shopping_script.js" charset="utf-8" type="text/javascript"></script>
-
-    <!-- Google Analytics -->
-    <script src="js/analytics.js" charset="utf-8" type="text/javascript"></script>
-    <script src="js/ga.js" charset="utf-8" type="text/javascript"></script>
-    <!-- End Google Analytics -->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="img/ico/favicon.png">
-    <!-- End Fav and touch icons -->
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -37,17 +15,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="index.html">A/B testing webshop</a>
+            <a class="brand" href="index.html.php">A/B testing webshop</a>
 
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="index.html"><i class="icon-home icon-white"></i> Home</a></li>
-                    <li class="active"><a href="winkelmandje.html"><i class="icon-shopping-cart icon-white"></i> Winkelmandje</a></li>
+                    <li><a href="index.html.php"><i class="icon-home icon-white"></i> Home</a></li>
+                    <li class="active"><a href="winkelmandje.html.php"><i class="icon-shopping-cart icon-white"></i> Winkelmandje</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Producten <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="product_htc_one.html">HTC One</a></li>
-                            <li><a href="product_iphone.html">Iphone 5</a></li>
+                            <li><a href="product_htc_one.html.php">HTC One</a></li>
+                            <li><a href="product_iphone.html.php">Iphone 5</a></li>
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
