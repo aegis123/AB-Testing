@@ -22,7 +22,7 @@
                     <li class="active"><a href="index.html.php"><i class="icon-home icon-white"></i> Home</a></li>
                     <li><a href="winkelmandje.html.php"><i class="icon-shopping-cart icon-white"></i> Winkelmandje</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Producten <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Producten <i class="caret"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="product_htc_one.html.php">HTC One</a></li>
                             <li><a href="product_iphone.html.php">Iphone 5</a></li>
