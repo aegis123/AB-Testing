@@ -49,7 +49,7 @@
                 Onderop de iPhone 5 zit een kleinere Lightning dockconnector.
             </p>
             <br/><br/><br />
-            <p><a class="btn btn-large btn-success" href="winkelmandje.html" onclick="addProductToCart('iphone', 600, 1)">KOPEN !!!</a></p>
+            <p><a class="btn btn-large btn-success" href="winkelmandje.html.php" onclick="addProductToCart('iphone', 600, 1)">KOPEN !!!</a></p>
         </div>
     </div>
     <div class="row-fluid">
