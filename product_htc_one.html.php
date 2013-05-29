@@ -36,7 +36,7 @@
 
 <div class="container">
     <div class="row-fluid">
-        <div class="span12"><h1>HTC_one</h1></div>
+        <div class="span12"><h1>HTC One</h1></div>
     </div>
     <div class="row-fluid">
         <div class="span4">
