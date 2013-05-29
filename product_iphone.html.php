@@ -2,9 +2,7 @@
 <html>
 <head>
     <title>Iphone 5</title>
-
     <?php include 'header.php' ?>
-
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -42,7 +40,7 @@
     </div>
     <div class="row-fluid">
         <div class="span5">
-            <img src="img/iphone_5.jpg"></img>
+            <img src="img/iphone_5.jpg" />
         </div>
         <div class="span7" id="beschrijving">
             <h2>beschrijving</h2>
@@ -51,7 +49,7 @@
                 Onderop de iPhone 5 zit een kleinere Lightning dockconnector.
             </p>
             <br/><br/><br />
-            <p><a class="btn btn-large btn-success"href="winkelmandje.html.php">KOPEN !!!</a></p>
+            <p><a class="btn btn-large btn-success" href="winkelmandje.html" onclick="addProductToCart('iphone', 600, 1)">KOPEN !!!</a></p>
         </div>
     </div>
     <div class="row-fluid">

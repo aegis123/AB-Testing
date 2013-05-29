@@ -2,9 +2,7 @@
 <html>
 <head>
     <title>HTC One</title>
-
     <?php include 'header.php' ?>
-
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -54,7 +52,7 @@
                 zodat je bij het kijken van een video kunt genieten van echt stereo geluid - uiteraard met HTC's bekende Beats Audio technologie.
             </p>
             <br/><br/><br />
-            <p><a class="btn btn-large btn-success"href="winkelmandje.html.php">KOPEN !!!</a></p>
+            <p><a class="btn btn-large btn-success" href="winkelmandje.html.php" onclick="addProductToCart('iphone', 600, 1)">KOPEN !!!</a></p>
         </div>
     </div>
     <div class="row-fluid">
