@@ -21,6 +21,7 @@
                     <th>Prijs</th>
                     <th>Aantal</th>
                     <th>totaal</th>
+                    <th>Bijwerken/Verwijder</th>
                 </tr>
                 </thead>
                 <tbody id="table_data">
