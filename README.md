@@ -1,1 +1,4 @@
-This file was created by JetBrains PhpStorm 6.0.2 for binding GitHub repository
+### A/B Testing
+
+For a research course on Hogeschool Utrecht.
+Making use of Google Analytics experiments to do A/B testing to raise conversion on websites
