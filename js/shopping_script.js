@@ -29,12 +29,12 @@ function createRow(product) {
     var input = $('<input>').attr('type', 'number').attr('min', '1').val(product.quantity).appendTo(td3);
     var td4 = $('<td></td>').html('&euro;' + (product.price * product.quantity));
     var td5 = $('<td></td>');
-    var update = $('<button></button>');
+    var update = $('<button></button>').attr('type', 'button');
     console.log(update.html());
-    update.addClass('btn');
+    update.addClass('btn btn-small');
     console.log(update.html());
     var glyph1 = $('<i></i>').addClass('icon-refresh');
-    var del = $('<button></button>').addClass('btn');
+    var del = $('<button></button>').addClass('btn').attr('type', 'button');
     var glyph2 = $('<i></i>').addClass('icon-remove-circle');
     glyph1.appendTo(update);
     glyph2.appendTo(del);
