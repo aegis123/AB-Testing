@@ -40,7 +40,7 @@
     </div>
     <div class="row-fluid">
         <div class="span5">
-            <img src="img/iphone_5.jpg" />
+            <img class="img-rounded" src="img/iphone_5.jpg" />
         </div>
         <div class="span7" id="beschrijving">
             <h2>beschrijving</h2>
