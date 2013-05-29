@@ -54,7 +54,7 @@
                 <tr>
                     <td>Apple Iphone 5</td>
                     <td>&euro;600</td>
-                    <td><input type="number" min="1" step="1" value="1" style="width: 35px;"/></td>
+                    <td><input type="number" min="1" step="1" value="1" style="width: 45px;"/></td>
                     <td>&euro;600</td>
                     <td><button class="btn"><i class="icon-refresh"></i></button></td>
                     <td><button class="btn"><i class="icon-remove-circle"></i></button></td>
