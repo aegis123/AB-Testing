@@ -5,8 +5,9 @@
  * Time: 13:08
  * To change this template use File | Settings | File Templates.
  */
-var product = new Object();
+
 function addProductToCart(productName, price, quantity) {
+    var product = {};
     if(productName != null || productName != undefined) {
         product.productName = productName;
     }
@@ -18,4 +19,48 @@ function addProductToCart(productName, price, quantity) {
     }
     var json = JSON.stringify(product);
     $.cookie(product.productName, json);
+}
+
+function createRow(product) {
+    var tr = $('<tr></tr>');
+    var td1 = $('<td></td>').text(product.productName);
+    var td2 = $('<td></td>').html('&euro;' + product.price);
+    var td3 = $('<td></td>');
+    var input = $('<input>').attr('type', 'number').attr('min', '1').val(product.quantity).appendTo(td3);
+    var td4 = $('<td></td>').html('&euro;' + (product.price * product.quantity));
+    var td5 = $('<td></td>');
+    var update = $('<button></button>');
+    console.log(update.html());
+    update.addClass('btn');
+    console.log(update.html());
+    var glyph1 = $('<i></i>').addClass('icon-refresh');
+    var del = $('<button></button>').addClass('btn');
+    var glyph2 = $('<i></i>').addClass('icon-remove-circle');
+    glyph1.appendTo(update);
+    glyph2.appendTo(del);
+    console.log(update.html());
+    console.log(del.html());
+    td5.html(update.html() + del.html());
+    console.log(td5.html());
+    td1.appendTo(tr);
+    td2.appendTo(tr);
+    td3.appendTo(tr);
+    td4.appendTo(tr);
+    td5.appendTo(tr);
+    tr.appendTo('#table_data');
+}
+
+function createShoppingCart() {
+    for (property in $.cookie()) {
+        switch(property) {
+            case 'iphone':
+            case 'htc_one':
+                var obj = null;
+                obj = JSON.parse($.cookie(property));
+                if(obj != null){
+                    createRow(obj);
+                }
+            break;
+        }
+    }
 }

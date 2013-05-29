@@ -40,7 +40,7 @@
     </div>
     <div class="row-fluid">
         <div class="span4">
-            <img class="img-rounded" src="img/htc_one/htc-one-m7-black1.jpg"></img>
+            <img src="img/htc_one/htc-one-m7-black1.jpg"></img>
         </div>
         <div class="span8" id="beschrijving">
             <h2>beschrijving</h2>

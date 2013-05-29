@@ -2,9 +2,7 @@
 <html>
 <head>
     <title>Winkelmandje</title>
-
     <?php include 'header.php' ?>
-
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,8 +33,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="container">
     <div class="row-fluid">
         <div class="span8">
@@ -50,20 +46,18 @@
                     <th>totaal</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>Apple Iphone 5</td>
-                    <td>&euro;600</td>
-                    <td><input type="number" min="1" step="1" value="1" style="width: 45px;"/></td>
-                    <td>&euro;600</td>
-                    <td><button class="btn"><i class="icon-refresh"></i></button></td>
-                    <td><button class="btn"><i class="icon-remove-circle"></i></button></td>
-                </tr>
+                <tbody id="table_data">
                 </tbody>
             </table>
             <button class="btn btn-primary btn-large"><i class="icon-shopping-cart icon-white"></i> Bestellen</button>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        createShoppingCart();
+    });
+</script>
 </body>
 </html>
