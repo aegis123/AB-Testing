@@ -8,7 +8,11 @@
     <script src="js/bootstrap.js" charset="utf-8" type="text/javascript"></script>
     <!-- End Bootstrap -->
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" charset="utf-8" type="text/javascript"></script>
+
     <link rel="stylesheet" href="css/mystyle.css"/>
+    <script src="js/shopping_script.js" charset="utf-8" type="text/javascript"></script>
 
     <!-- Google Analytics -->
     <script src="js/analytics.js" charset="utf-8" type="text/javascript"></script>
@@ -21,6 +25,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="img/ico/favicon.png">
+    <!-- End Fav and touch icons -->
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,8 +40,8 @@
 
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="winkelmandje.html">Winkelmandje</a></li>
+                    <li class="active"><a href="index.html"><i class="icon-home icon-white"></i>  Home</a></li>
+                    <li><a href="winkelmandje.html"><i class="icon-shopping-cart icon-white"></i> Winkelmandje</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -46,21 +51,25 @@
 </div>
 <div class="container">
     <div class="row-fluid">
-        <div class="span12">
+        <div class="span8">
             <h1>Winkelmandje</h1>
-            <table class="table table-hover">
+            <table class="table table-hover table-bordered">
                 <thead>
                 <tr>
-                    <th>Producten</th>
+                    <th>Productnaam</th>
                     <th>Prijs</th>
                     <th>Aantal</th>
+                    <th>totaal</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>Apple Iphone 5</td>
                     <td>&euro;600</td>
-                    <td><input type="number" min="1" step="1"></td>
+                    <td><input type="number" min="1" step="1" /></td>
+                    <td>&euro;600</td>
+                    <td><button class="btn"><i class="icon-refresh"></i></button></td>
+                    <td><button class="btn"><i class="icon-remove-circle"></i></button></td>
                 </tr>
                 </tbody>
             </table>
