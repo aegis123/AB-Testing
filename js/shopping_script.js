@@ -26,14 +26,16 @@ function createRow(product) {
     var td1 = $('<td></td>').text(product.productName);
     var td2 = $('<td></td>').html('&euro;' + product.price);
     var td3 = $('<td></td>');
-    var input = $('<input>').attr('type', 'number').attr('min', '1').val(product.quantity).appendTo(td3);
+    var input = $('<input>').attr('type', 'number').attr('min', '1').attr('style', 'width:50px;').val(product.quantity).appendTo(td3);
     var td4 = $('<td></td>').html('&euro;' + (product.price * product.quantity));
     var td5 = $('<td></td>');
     var update = $('<button></button>').attr('type', 'button');
-    update.addClass('btn btn-small');
+    update.addClass('btn');
     var glyph1 = $('<i></i>').addClass('icon-refresh');
-    var del = $('<button></button>').addClass('btn').attr('type', 'button');
-    var glyph2 = $('<i></i>').addClass('icon-remove-circle');
+    var del = $('<button></button>').addClass('btn btn-danger')
+        .attr('type', 'button')
+        .attr('onclick', "deleteProductFromCart('" + product.productName+"')");
+    var glyph2 = $('<i></i>').addClass('icon-remove icon-white');
     glyph1.appendTo(update);
     glyph2.appendTo(del);
     td5.html(update[0].outerHTML + del[0].outerHTML);
@@ -58,4 +60,8 @@ function createShoppingCart() {
             break;
         }
     }
+}
+function deleteProductFromCart(productName){
+    $.cookie(productName, null);
+    document.location.reload();
 }
