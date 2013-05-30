@@ -5,6 +5,11 @@
  * Time: 13:08
  * To change this template use File | Settings | File Templates.
  */
+if(window.location.pathname == '/step2.html.php' && document.referrer == '/step1_b.html.php') {
+    $('#back_button').attr('href', 'step1_b.html.php')
+} else if(window.location.pathname == '/step2.html.php' && document.referrer == '/step1_a.html.php') {
+    $('#back_button').attr('href', 'step1_a.html.php')
+}
 
 function addProductToCart(productName, price, quantity) {
     var product = {};

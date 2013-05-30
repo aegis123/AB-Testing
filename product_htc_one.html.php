@@ -25,7 +25,7 @@
                 zodat je bij het kijken van een video kunt genieten van echt stereo geluid - uiteraard met HTC's bekende Beats Audio technologie.
             </p>
             <br/><br/><br />
-            <p><a class="btn btn-large btn-success" href="winkelmandje.html.php" onclick="addProductToCart('htc_one', 600, 1)">KOPEN !!!</a></p>
+            <p><a class="btn btn-large btn-success" href="winkelmandje.html.php" onclick="addProductToCart('htc_one', 450, 1)">KOPEN !!!</a></p>
         </div>
     </div>
     <div class="row-fluid">

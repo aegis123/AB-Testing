@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" />
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/js/bootstrap.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/js/ga.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/js/jquery.cookie.js" libraries="{jquery}" />
+    <file url="file://$PROJECT_DIR$/js/shopping_script.js" libraries="{jquery}" />
+  </component>
+</project>
 

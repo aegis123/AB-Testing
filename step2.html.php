@@ -13,19 +13,49 @@ include 'step2.php';
     <div class="row-fluid">
         <div class="span12">
             <h1>Bevestiging</h1>
-
-            <div class="span6">
-                <h2>Verzend adres</h2>
-                <address>
-                    <strong><?= $naam ?></strong><br/>
-                    <?= $straat . " " . $huisnr ?><br/>
-                    <?= $postcode . " " . $stad ?><br/>
-                </address>
-            </div>
-        </div>
-
+            <h2>Verzend adres</h2>
+             <address>
+                <strong><?= $naam ?></strong><br/>
+                <?= $straat . " " . $huisnr ?><br/>
+                <?= $postcode . " " . $stad ?><br/>
+             </address>
+            <h2>Artikelen</h2>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Productnaam</th>
+                    <th>Prijs</th>
+                    <th>Aantal</th>
+                    <th>Total prijs</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?
+                    $count = 0;
+                    foreach($items as $product) {
+                        $count += (int) $product->quantity * (int) $product->price;
+                        ?>
+                        <tr>
+                            <td><?= $product->productName ?></td>
+                            <td>&euro;<?= (int) $product->price ?></td>
+                            <td><?= $product->quantity ?></td>
+                            <td>&euro;<?= (int) $product->quantity * (int) $product->price ?></td>
+                        </tr>
+                <?
+                    }
+                ?>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><strong>Totaal</strong></td>
+                    <td>&euro;<?= $count ?></td>
+                </tr>
+                </tbody>
+            </table>
+            <a type="button" class="btn btn-danger btn-large"><i
+                    class="icon-backward icon-white" id="back_button"></i> Terug</a>
         <a type="button" class="btn btn-success btn-large" href="thankyou.html.php"><i
                 class="icon-ok icon-white"></i> bevestig aankoop</a>
+        </div>
 
     </div>
 </div>

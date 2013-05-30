@@ -6,46 +6,46 @@
  * To change this template use File | Settings | File Templates.
  */
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-41294141-1']);
+_gaq.push(['_setAccount', 'UA-41294141-2']);
 _gaq.push(['_trackPageview']);
 
 if (window.location.pathname == '/thankyou.html.php') {
-    if ($.cookie().hasOwnProperty('adres') && ($.cookie().hasOwnProperty('iphone') || $.cookie().hasOwnProperty('htc_one'))) {
+    if (!($.cookie().hasOwnProperty('adres') && ($.cookie().hasOwnProperty('iphone') || $.cookie().hasOwnProperty('htc_one')))) {
         var order = [];
-        var totalPrice = 0, quantity = 0;
-        var randomNumber =Math.floor(Math.random()*10000001)
+        var totalPrice = 0;
+        var randomNumber = Math.floor(Math.random() * 10000001);
+        var json;
         for (var prop in $.cookie()) {
             switch (prop) {
                 case 'adres':
+                    json = JSON.parse($.cookie(prop));
                     order.push('_addTrans');
-                    order.push(randomNumber);
+                    order.push(String(randomNumber));
                     order.push('A/B Testing shop');
-                    order.push(prop.stad);
-                    order.push(prop.stad);
+                    order.push(json.stad);
+                    order.push(json.stad);
                     order.push('NL');
+                    $.removeCookie(prop)
                     break;
                 case 'iphone':
                 case 'htc_one':
+                    json = JSON.parse($.cookie(prop));
                     var item = [];
                     item.push('_addItem');
                     item.push(String(randomNumber));
-                    item.push(prop.productName);
-                    item.push(prop.productName);
+                    item.push(String(json.productName));
+                    item.push(String(json.productName));
                     item.push('smartphones');
-                    item.push(prop.price);
-                    item.push(prop.quantity);
+                    item.push(String(json.price));
+                    item.push(String(json.quantity));
+                    $.removeCookie(prop);
                     _gaq.push(item);
-                    totalPrice += prop.price;
-                    quantity += prop.quantity;
+                    totalPrice += json.price * json.quantity;
                     break;
             }
         }
-        totalPrice = totalPrice * quantity;
-        var tax = totalPrice*0.19 - totalPrice;
-        order.splice(2, String(totalPrice));
-        order.splice(3, String(tax));
-        order.splice(4, String(6.75));
-        console.log(order);
+        var tax = totalPrice * 0.19;
+        order.splice(2, 0, [String(totalPrice), String(tax), String(6.75)]);
         _gaq.push(order);
         _gaq.push(['_trackTrans']);
     }
