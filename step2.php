@@ -17,11 +17,8 @@ if($_POST){
     $adresGegevens = '';
     $adresGegevens = $naam . $straat . $huisnr . $postcode . $stad;
 
-    print_r($adresGegevens);
-
     setcookie("adres", json_encode($adresGegevens));
 
-    print_r($_COOKIE["adres"]);
 }
 
 ?>
