@@ -2,14 +2,10 @@
 <html>
 <head>
     <title>Thankyou A/B testing</title>
-
     <?php include 'header.php' ?>
-
 </head>
 <body>
     <?php include 'menu.php' ?>
-
-
 <div class="container">
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit">
