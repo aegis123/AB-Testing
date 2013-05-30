@@ -26,10 +26,18 @@ function createRow(product) {
     var td1 = $('<td></td>').text(product.productName);
     var td2 = $('<td></td>').html('&euro;' + product.price);
     var td3 = $('<td></td>');
-    var input = $('<input>').attr('type', 'number').attr('min', '1').attr('style', 'width:50px;').val(product.quantity).appendTo(td3);
+    var input = $('<input>')
+        .attr('type', 'number')
+        .attr('min', '1')
+        .attr('style', 'width:50px;')
+        .attr('id', 'product_quantity')
+        .val(product.quantity)
+        .appendTo(td3);
     var td4 = $('<td></td>').html('&euro;' + (product.price * product.quantity));
     var td5 = $('<td></td>');
-    var update = $('<button></button>').attr('type', 'button');
+    var update = $('<button></button>')
+        .attr('type', 'button')
+        .attr('onclick', "refreshCart('"+product.productName+"')");
     update.addClass('btn');
     var glyph1 = $('<i></i>').addClass('icon-refresh');
     var del = $('<button></button>').addClass('btn btn-danger')
@@ -57,11 +65,24 @@ function createShoppingCart() {
                 if(obj != null){
                     createRow(obj);
                 }
-            break;
+                break;
         }
     }
 }
+
 function deleteProductFromCart(productName){
-    $.cookie(productName, null);
+    $.cookie(productName, null); // delete cookie
     document.location.reload();
+}
+
+function refreshCart(productName){
+    if(productName != null || productName != undefined){
+        obj = JSON.parse($.cookie(productName));
+        obj.quantity = document.getElementById('product_quantity').value;
+    }
+    console.log(obj);
+    console.log('JSON to String:'+JSON.stringify(obj))
+    console.log($.cookie(productName, JSON.stringify(obj)));
+    console.log('Cookie: ' + $.cookie(productName));
+
 }
