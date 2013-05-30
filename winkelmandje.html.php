@@ -27,7 +27,7 @@
                 <tbody id="table_data">
                 </tbody>
             </table>
-            <button class="btn btn-primary btn-large"><i class="icon-shopping-cart icon-white"></i> Bestellen</button>
+            <a class="btn btn-primary btn-large" id="order_button" href="step1_a.html.php"><i class="icon-shopping-cart icon-white"></i> Bestellen</a>
         </div>
     </div>
 </div>
