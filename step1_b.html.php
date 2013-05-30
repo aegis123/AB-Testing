@@ -7,37 +7,25 @@
 <body>
 <?php include 'menu.php' ?>
 <div class="container">
-    <div>
-        <fieldset>
-            <legend>Adres gegevens</legend>
-            <form class="form-horizontal">
-                <div class="control-group">
-                    <label class="control-label" for="naam">Naam:</label>
-                    <div class="controls">
-                        <input type="text" id="naam" placeholder="naam" style="width: 21em;" />
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="straat">Straat en huisnummer:</label>
-                    <div class="controls">
-                        <input type="text" id="straat" placeholder="straat" style="width: 17em;" />
-                        <input type="text" id="huisnr" placeholder="huisnr" style="width: 3em;" />
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="postcode">Stad en Postcode:</label>
-                    <div class="controls">
-                        <input type="text" id="postcode" placeholder="postcode" style="width: 5em;" />
-                        <input type="text" id="stad" placeholder="stad" style="width: 15em;" />
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="controls">
-                        <button type="submit" class="btn">Bestellen</button>
-                    </div>
-                </div>
-            </form>
-        </fieldset>
+    <div class="span8">
+        <form>
+            <fieldset>
+                <legend>Adres gegevens</legend>
+                <label>Naam:</label>
+                <input type="text" id="naam" placeholder="naam" />
+                <label>Straat:</label>
+                <input type="text" id="straat" placeholder="straat" />
+                <label>Huisnummer:</label>
+                <input type="text" id="huisnr" placeholder="huisnr" />
+                <label>Postcode:</label>
+                <input type="text" id="postcode" placeholder="postcode" />
+                <label>Stad:</label>
+                <input type="text" id="stad" placeholder="stad" /> <br />
+                <button type="submit" class="btn btn-danger">
+                    <i class="icon-shopping-cart icon-white"></i> Bestellen
+                </button>
+            </fieldset>
+        </form>
     </div>
 </div>
 </body>

@@ -33,7 +33,7 @@
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <button type="submit" class="btn">Bestellen</button>
+                        <button type="submit" class="btn btn-primary">Bestellen</button>
                     </div>
                 </div>
             </form>
