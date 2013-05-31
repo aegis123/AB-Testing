@@ -21,6 +21,6 @@
 <!-- End Fav and touch icons -->
 
 <!-- Google Analytics -->
-<script src="js/ga.js" charset="utf-8" type="text/javascript"></script>
-<script src="js/analytics.js" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="js/ga.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/analytics.js"></script>
 <!-- End Google Analytics -->
