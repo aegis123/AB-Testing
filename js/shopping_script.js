@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var refer_url = String(document.referrer.substring(35, 52));
-    if (window.location.pathname == '/step2.html.php') {
+    if (window.location.pathname === '/step2.html.php') {
         var stepA = String('/step1_a.html.php'), stepB = String('/step1_b.html.php');
         switch (refer_url) {
             case stepA:
@@ -13,6 +13,7 @@ $(document).ready(function () {
 
 function addProductToCart(productName, price, quantity) {
     var product = {};
+    var json;
     if (productName != null || productName != undefined) {
         product.productName = productName;
     }
@@ -22,7 +23,7 @@ function addProductToCart(productName, price, quantity) {
     if (quantity != null || quantity != undefined) {
         product.quantity = quantity;
     }
-    var json = JSON.stringify(product);
+    json = JSON.stringify(product);
     $.cookie(product.productName, json);
 }
 
@@ -59,12 +60,26 @@ function createRow(product) {
     td5.appendTo(tr);
     tr.appendTo('#table_data');
 }
-function disableButtonFunction() {
-    console.log('disable button');
-    $('#order_button').addClass('disabled').attr('disabled', 'disabled')
-}
-function createShoppingCart() {
+
+function disableButton() {
     var disableButton = true;
+    for (var property in $.cookie()) {
+        switch (property) {
+            case 'iphone':
+            case 'htc_one':
+                disableButton = false;
+                break;
+        }
+    }
+    if (disableButton) {
+        $('#order_button').addClass('disabled').attr('onclick', 'return false;');
+    } else {
+        $('#order_button').removeClass('disabled').removeAttr('onclick');
+    }
+    return disableButton;
+}
+
+function createShoppingCart() {
     for (var property in $.cookie()) {
         switch (property) {
             case 'iphone':
@@ -75,31 +90,16 @@ function createShoppingCart() {
                 if (obj != null) {
                     createRow(obj);
                 }
-                disableButton = false;
                 break;
         }
     }
-    if (disableButton) {
-        disableButtonFunction();
-    }
+    disableButton();
 }
 
 function deleteProductFromCart(productName) {
     $.removeCookie(productName); // delete cookie
     $('#' + productName).remove();
-    var disableButton = true;
-    for (var property in $.cookie()) {
-        switch (property) {
-            case 'iphone':
-            case 'htc_one':
-                disableButton = false;
-                break;
-        }
-    }
-
-    if (disableButton) {
-        disableButtonFunction();
-    }
+    disableButton();
 }
 
 function refreshCart(productName) {
@@ -109,4 +109,5 @@ function refreshCart(productName) {
         $('#' + productName + '_total').html('&euro;' + (obj.price * obj.quantity));
     }
     $.cookie(productName, JSON.stringify(obj));
+    disableButton();
 }
