@@ -1,15 +1,15 @@
-/**
- * Created with JetBrains PhpStorm.
- * User: dylan
- * Date: 29-5-13
- * Time: 13:08
- * To change this template use File | Settings | File Templates.
- */
-if(window.location.pathname == '/step2.html.php' && document.referrer == '/step1_b.html.php') {
-    $('#back_button').attr('href', 'step1_b.html.php')
-} else if(window.location.pathname == '/step2.html.php' && document.referrer == '/step1_a.html.php') {
-    $('#back_button').attr('href', 'step1_a.html.php')
-}
+$(document).ready(function () {
+    var refer_url = String(document.referrer.substring(35, 52));
+    if (window.location.pathname == '/step2.html.php') {
+        var stepA = String('/step1_a.html.php'), stepB = String('/step1_b.html.php');
+        switch (refer_url) {
+            case stepA:
+            case stepB:
+                $('#back_button').attr('href', refer_url);
+                break;
+        }
+    }
+});
 
 function addProductToCart(productName, price, quantity) {
     var product = {};
@@ -79,7 +79,7 @@ function createShoppingCart() {
                 break;
         }
     }
-    if(disableButton) {
+    if (disableButton) {
         disableButtonFunction();
     }
 }
@@ -97,7 +97,7 @@ function deleteProductFromCart(productName) {
         }
     }
 
-    if(disableButton) {
+    if (disableButton) {
         disableButtonFunction();
     }
 }
