@@ -9,7 +9,29 @@ $(document).ready(function () {
                 break;
         }
     }
+
+    var idActive;
+    switch(window.location.pathname) {
+        case '/index.html.php':
+            idActive = 'home';
+            break;
+        case '/winkelmandje.html.php':
+            idActive = 'shoppingcart';
+            break;
+        case '/product_htc_one.html.php':
+            idActive = 'htc_one';
+            break;
+        case '/product_iphone.html.php':
+            idActive = 'iphone';
+            break;
+        case '/contact.html.php':
+            idActive = 'contact';
+            break;
+    }
+    $('li.active').removeAttr('class', 'active');
+    $('#'+idActive).attr('class', 'active');
 });
+
 
 function addProductToCart(productName, price, quantity) {
     var product = {};
