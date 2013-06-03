@@ -36,7 +36,9 @@
     })();
 
     if (window.location.pathname == '/thankyou.html.php') {
-        if (!($.cookie().hasOwnProperty('adres') && ($.cookie().hasOwnProperty('iphone') || $.cookie().hasOwnProperty('htc_one')))) {
+        console.log('thank you page');
+        if ($.cookie().hasOwnProperty('adres') && ($.cookie().hasOwnProperty('iphone') || $.cookie().hasOwnProperty('htc_one'))) {
+            console.log('create trans for analytics');
             var order = [];
             var totalPrice = 0;
             var randomNumber = Math.floor(Math.random() * 10000001);
@@ -51,7 +53,7 @@
                         order.push(json.stad);
                         order.push(json.stad);
                         order.push('NL');
-                        $.removeCookie(prop)
+                        $.removeCookie(prop);
                         break;
                     case 'iphone':
                     case 'htc_one':
@@ -74,6 +76,7 @@
             order.splice(2, 0, [String(totalPrice), String(tax), String(6.75)]);
             _gaq.push(order);
             _gaq.push(['_trackTrans']);
+            console.log(_gaq);
         }
     }
 </script>

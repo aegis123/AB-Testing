@@ -33,6 +33,7 @@ include 'step2.php';
                 <tbody>
                 <?
                 $count = 0;
+                if($items != null && isset($items)) {
                 foreach ($items as $product) {
                     $count += (int)$product->quantity * (int)$product->price;
                     ?>
@@ -43,6 +44,7 @@ include 'step2.php';
                         <td>&euro;<?= (int)$product->quantity * (int)$product->price ?></td>
                     </tr>
                 <?
+                }
                 }
                 ?>
                 <tr>
