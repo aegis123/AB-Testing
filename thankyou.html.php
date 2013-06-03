@@ -10,7 +10,7 @@
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit">
         <h1>Bedankt</h1>
-        <p>Bedankt voor het bestellen bij onze webshop</p>
+        <p>Bedankt voor het bestellen in onze webshop</p>
     </div>
     </div>
 </body>

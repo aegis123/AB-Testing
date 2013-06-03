@@ -16,9 +16,9 @@ include 'step2.php';
 
             <h2>Verzend adres</h2>
             <address>
-                <strong><?= $naam ?></strong><br/>
-                <?= $straat . " " . $huisnr ?><br/>
-                <?= $postcode . " " . $stad ?><br/>
+                <strong><?= $naam ?></strong><br />
+                <?= $straat . " " . $huisnr ?><br />
+                <?= $postcode . " " . $stad ?><br />
             </address>
             <h2>Artikelen</h2>
             <table class="table table-hover">
